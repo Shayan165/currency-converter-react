@@ -11,7 +11,7 @@ function App() {
   const options = Object.keys(currencyinfo);
 
   const convert = () => {
-    setConvertedamount(amount * currencyinfo[to]);
+    setConvertedamount((amount * currencyinfo[to]).toFixed(6));
   };
 
   const swap =()=>{
@@ -60,7 +60,7 @@ function App() {
             <div className="w-full mt-1 mb-4">
               <InputBox
                 label="To"
-                amount={convertedamount.toFixed(6)}
+                amount={convertedamount}
                 currencyoptions={options}
                 selectedcurrency={to}
                 onchangecurrency={(currency) => setTo(currency)}
