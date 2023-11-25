@@ -60,7 +60,7 @@ function App() {
             <div className="w-full mt-1 mb-4">
               <InputBox
                 label="To"
-                amount={convertedamount}
+                amount={convertedamount.toFixed(6)}
                 currencyoptions={options}
                 selectedcurrency={to}
                 onchangecurrency={(currency) => setTo(currency)}
